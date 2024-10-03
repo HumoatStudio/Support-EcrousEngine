@@ -1,0 +1,134 @@
+/* Общий стиль */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: #141e30;
+    background: linear-gradient(to right, #243b55, #141e30);
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    animation: slideDown 1.5s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #141e30;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    animation: bounce 3s ease-in-out infinite;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+.ad-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #243b55;
+}
+
+.ad-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.ad-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease;
+}
+
+.ad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounceIn 2.5s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #141e30;
+    animation: fadeIn 3s ease;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Адаптация под разные экраны */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .ad-section h2 {
+        font-size: 2rem;
+    }
+
+    .ad-section p {
+        font-size: 1rem;
+    }
+}
